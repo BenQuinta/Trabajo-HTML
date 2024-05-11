@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>GameStationPS</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">GameStationPS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="Acerca.html">Acerca</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="TodosLosProductos.html">Todos Los Productos</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="ArticulosPopulares.html">Articulos Populares</a></li>
+                        <li><a class="dropdown-item" href="NuevasLlegadas.html">Nuevas Llegadas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="carrito.html" class="btn btn-outline-dark">
+                            <i class="bi-cart-fill me-1"></i>
+                            Carrito
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cartCount">0</span>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="840_560.jpg" alt="The Last of us 2" /></div>
+                    <div class="col-md-6">
+                        <div class="small mb-1">SKU: BST-498</div>
+                        <h1 class="display-5 fw-bolder">The last of Us 2</h1>
+                        <div class="fs-5 mb-5">
+                            <span>$48.00</span>
+                        </div>
+                         <!-- Product reviews-->
+                         <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <p class="lead"> 
+                             Ambientado cinco años después de The Last of Us (2013), el juego se centra en dos personajes jugables en un Estados Unidos post-apocalíptico cuyas vidas se entrelazan: Ellie, que busca venganza después de sufrir una tragedia, y Abby, una soldado que se ve envuelta en un conflicto entre su milicia y un culto religioso
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                            <button class="btn btn-outline-dark addToCartBtn" data-product-id="tlou2" data-product-name="The Last of Us II" data-product-price="18.00">
+                                <i class="bi-cart-plus-fill me-1"></i>
+                                Añadir al carrito
+                            </button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button type="button" class="btn btn-outline-dark flex-shrink-0" data-bs-toggle="modal" data-bs-target="#theLastOfUsModal">
+            <i class="bi-cart-fill me-1"></i>
+            Ver Detalles
+        </button>
+        <section class="py-5 bg-light">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="fw-bolder mb-4">Productos relacionados</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="Ghost+of+Tsushima_20230403184910.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Ghost of Tsushima</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$68.00</span>
+                                    $48.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="carrito_ghostoftsushima.html">Añadir a Carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="opinion_ghostoftsushima.html">Mas Info</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="840_560.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">The Last of Us II</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="carrito_tlou2.html">Añadir a Carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="opinion_tlou2.html">Mas Info</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="god-of-war-20180402115205.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">God of War</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="carrrito_godofwar.html">Añadir a Carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="opinion_godofwar.html">Mas Info</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="spider-man-2-screenshot-peter-miles-en-25may23.webp" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Marvel's Spiderman 2</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="carrito_marvelspiderman.html">Añadir a Carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="opinion_marvelspiderman.html">Mas Info</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal The Last of Us II -->
+<div class="modal fade" id="theLastOfUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+                <img src="840_560.jpg" alt="The Last of Us II" class="img-fluid mb-3">
+                <p>
+"The Last of Us" es un juego de supervivencia donde Joel, un contrabandista, y Ellie, una joven inmune a una plaga devastadora, viajan por un mundo postapocalíptico luchando contra humanos infectados y facciones hostiles.</p>
+                <p>Precio: $18.00</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Añadir a Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; GameStationPS 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            // Variable para almacenar el carrito
+            let cart = [];
+    
+            // Función para inicializar el carrito desde localStorage
+            function initializeCart() {
+                cart = JSON.parse(localStorage.getItem('cart')) || [];
+                updateCartCount();
+            }
+    
+            // Función para agregar un producto al carrito
+            function addToCart(product) {
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+            }
+    
+            // Función para actualizar el contador del carrito en el HTML
+            function updateCartCount() {
+                const cartCount = document.getElementById('cartCount');
+                cartCount.innerText = cart.length;
+            }
+    
+            // Evento al cargar el documento
+            document.addEventListener('DOMContentLoaded', function() {
+                initializeCart();
+    
+                // Obtener todos los botones "Añadir al Carrito"
+                const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+    
+                // Agregar un evento de clic a cada botón "Añadir al Carrito"
+                addToCartButtons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        // Obtener los datos del producto del atributo de datos del botón
+                        const productId = button.getAttribute('data-product-id');
+                        const productName = button.getAttribute('data-product-name');
+                        const productPrice = button.getAttribute('data-product-price');
+    
+                        // Crear objeto de producto
+                        const product = {
+                            id: productId,
+                            name: productName,
+                            price: parseFloat(productPrice)
+                        };
+    
+                        // Agregar el producto al carrito
+                        addToCart(product);
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
