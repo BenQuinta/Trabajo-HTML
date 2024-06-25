@@ -20,7 +20,7 @@
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
                     <h1 class="display-5 fw-bolder">Crear Cuenta</h1>
-                    <form id="signupForm" action="#" method="POST">
+                    <form id="signupForm" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre Completo:</label>
                             <input type="text" id="nombre" name="nombre" class="form-control" required>
@@ -68,6 +68,35 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="validaciones.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#signupForm').submit(function(event) {
+            event.preventDefault();
+            var formData = $(this).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: 'signup.php',
+                data: formData,
+                success: function(response) {
+                    if (response.includes('Cuenta creada correctamente')) {
+                        $('#signupSuccessMessage').show();
+                        $('#signupErrorMessage').hide();
+                        setTimeout(function() {
+                            window.location.replace('iniciarsesion.html');
+                        }, 2000); // Redirigir después de 2 segundos
+                    } else {
+                        $('#signupErrorMessage').text(response).show();
+                        $('#signupSuccessMessage').hide();
+                    }
+                },
+                error: function() {
+                    $('#signupErrorMessage').text('Hubo un error al crear la cuenta. Inténtalo de nuevo.').show();
+                    $('#signupSuccessMessage').hide();
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
