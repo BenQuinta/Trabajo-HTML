@@ -61,9 +61,6 @@
                             <button class="btn btn-outline-dark addToCartBtn" data-product-id="ragnarok" data-product-name="God of War: Ragnarok" data-product-price="60.00">
                                 <i class="bi-cart-plus-fill me-1"></i>
                                 Añadir al carrito
-                            </button>
-                            <button class="btn btn-outline-danger mt-auto eliminarDelCarritoBtn" data-product-id="ragnarok">
-                                Eliminar
                             </button>                            
                         </div>
                     </div>
@@ -72,7 +69,7 @@
         </section>
         <button type="button" class="btn btn-outline-dark flex-shrink-0" data-bs-toggle="modal" data-bs-target="#godOfWarRagnarokModal">
             <i class="bi-cart-fill me-1"></i>
-            Ver detalles
+            Ver Detalles
         </button>
         
         <!-- Related items section-->
@@ -204,10 +201,10 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button class="btn btn-outline-dark addToCartBtn" data-product-id="ragnarok" data-product-name="God of War: Ragnarok" data-product-price="60.00">
-                                <i class="bi-cart-plus-fill me-1"></i>
-                                Añadir al carrito
-                            </button>
+          <button class="btn btn-outline-dark addToCartBtn" data-product-id="ragnarok" data-product-name="God of War: Ragnarok" data-product-price="60.00">
+            <i class="bi-cart-plus-fill me-1"></i>
+            Añadir al carrito
+        </button>
         </div>
       </div>
     </div>
@@ -223,46 +220,33 @@
         <script>
             // Variable para almacenar el carrito
             let cart = [];
-        
+    
             // Función para inicializar el carrito desde localStorage
             function initializeCart() {
                 cart = JSON.parse(localStorage.getItem('cart')) || [];
                 updateCartCount();
             }
-        
+    
             // Función para agregar un producto al carrito
             function addToCart(product) {
                 cart.push(product);
                 localStorage.setItem('cart', JSON.stringify(cart));
                 updateCartCount();
             }
-        
-            // Función para eliminar un producto del carrito
-            function removeFromCart(productId) {
-                // Filtrar el carrito para excluir el producto que se va a eliminar
-                cart = cart.filter(function(product) {
-                    return product.id !== productId;
-                });
-                // Guardar el carrito actualizado en el almacenamiento local
-                localStorage.setItem('cart', JSON.stringify(cart));
-                // Actualizar el contador del carrito y recargar la página
-                updateCartCount();
-                location.reload();
-            }
-        
+    
             // Función para actualizar el contador del carrito en el HTML
             function updateCartCount() {
                 const cartCount = document.getElementById('cartCount');
                 cartCount.innerText = cart.length;
             }
-        
+    
             // Evento al cargar el documento
             document.addEventListener('DOMContentLoaded', function() {
                 initializeCart();
-        
+    
                 // Obtener todos los botones "Añadir al Carrito"
                 const addToCartButtons = document.querySelectorAll('.addToCartBtn');
-        
+    
                 // Agregar un evento de clic a cada botón "Añadir al Carrito"
                 addToCartButtons.forEach(function(button) {
                     button.addEventListener('click', function() {
@@ -270,30 +254,16 @@
                         const productId = button.getAttribute('data-product-id');
                         const productName = button.getAttribute('data-product-name');
                         const productPrice = button.getAttribute('data-product-price');
-        
+    
                         // Crear objeto de producto
                         const product = {
                             id: productId,
                             name: productName,
                             price: parseFloat(productPrice)
                         };
-        
+    
                         // Agregar el producto al carrito
                         addToCart(product);
-                    });
-                });
-        
-                // Obtener todos los botones "Eliminar"
-                const deleteButtons = document.querySelectorAll('.eliminarDelCarritoBtn');
-        
-                // Agregar un evento de clic a cada botón "Eliminar"
-                deleteButtons.forEach(function(button) {
-                    button.addEventListener('click', function() {
-                        // Obtener el ID del producto a eliminar del atributo de datos del botón
-                        const productId = button.getAttribute('data-product-id');
-        
-                        // Llamar a la función para eliminar el producto del carrito
-                        removeFromCart(productId);
                     });
                 });
             });
