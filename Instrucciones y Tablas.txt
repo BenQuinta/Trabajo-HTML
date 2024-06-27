@@ -1,0 +1,27 @@
+Tabla para colocar en MySQL
+
+
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    apellido_paterno VARCHAR(50) NOT NULL,
+    apellido_materno VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    contrasena VARCHAR(255) NOT NULL,
+    telefono VARCHAR(20)
+);
+
+
+CREATE TABLE reseñas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT NOT NULL,
+    juego VARCHAR(100) NOT NULL,
+    calificacion INT NOT NULL,
+    texto TEXT NOT NULL,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+Al momento de crear la base de datos correspondiente esta debe llamarse "trabajohtml" por que si tiene otro nombre distinto va a generar errores en el trabaja correspondiente y no podre funcionar correctamente
+
+Cuando se cree una cuenta correspondiente en el HTML, debemos revisar la ID de la cuenta en phpMyAdmin mas en concreto en la tabla de usuarios, gracias a esta ID vamos a poder crear las reseñas y que estas se manden a la base de datos y que a la vez se muestren en pantallas, el cambio de la ID se hace en ADD_VIEW.PHP
